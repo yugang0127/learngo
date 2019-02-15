@@ -47,6 +47,12 @@ func main() {
 	})
 	fmt.Println("nodeCount:", nodeCount)
 
+	c := root.TraverseWithChannel()
+	maxNode := 0
+	for node := range c {
+		maxNode = node.Value
+	}
+	fmt.Println("Max node value:", maxNode)
 	root.Right.Left.SetValue(6)
 	root.Right.Left.Print()
 	fmt.Println()
