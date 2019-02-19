@@ -54,7 +54,6 @@ func walk(maze [][]int, start, end point) [][]int {
 		steps[i] = make([]int, len(maze[i]))
 	}
 
-
 	Q := []point{start}
 
 	for len(Q) > 0 {
