@@ -10,9 +10,13 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
+var rateLimiter = time.Tick(10 * time.Millisecond)
+
 func Fetch(url string) ([]byte, error) {
+	<- rateLimiter
 	request, err := http.NewRequest(http.MethodGet,
 		url, nil)
 	request.Header.Add("User-Agent",
