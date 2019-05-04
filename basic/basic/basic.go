@@ -71,22 +71,22 @@ func consts()  {
 }
 
 func enums()  {
-	const (
-		cpp = iota * 3 + 1
-		java
-		php
-		python
-		golang
-	)
+const (
+	cpp = iota * 3 + 1
+	java
+	php
+	python
+	golang
+)
 
-	const (
-		b = 1 << (10 * iota)
-		kb
-		mb
-		gb
-		tb
-		pb
-	)
+const (
+	b = 1 << (10 * iota)
+	kb
+	mb
+	gb
+	tb
+	pb
+)
 
 	fmt.Println(cpp, java, php, python, golang)
 	fmt.Println(b, kb, mb, gb, tb, pb)
